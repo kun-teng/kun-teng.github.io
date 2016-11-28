@@ -56,24 +56,20 @@
 </span>
     <h1 class="post-title">PostGIS Tutorial 1</h1>
     <section class="post-content">
-      <p>##搭建测试环境 On Mac with Homebrew</p>
-<p>###1.安装postgreSQL及PostGIS</p>
-<p>brew install postgre</p>
+      <h2 id="搭建测试环境-On-Mac-with-Homebrew"><a href="#搭建测试环境-On-Mac-with-Homebrew" class="headerlink" title="搭建测试环境 On Mac with Homebrew"></a>搭建测试环境 On Mac with Homebrew</h2><h3 id="1-安装postgreSQL及PostGIS"><a href="#1-安装postgreSQL及PostGIS" class="headerlink" title="1.安装postgreSQL及PostGIS"></a>1.安装postgreSQL及PostGIS</h3><p>brew install postgre</p>
 <p>brew install postgis</p>
 <p>echo “” &gt;&gt; ~.bash_profile<br>echo “export PGDATA=${PGDATA}” &gt;&gt;.bash_profile<br>source ~/.bash_profile</p>
 <p>sed -i ‘s/#logging_collector = off/logging_collector = on/‘ ${PGDATA}/postgresql.conf</p>
-<p>###2.初始化数据库实例gis<br>pg_ctl init gis<br>psql gis -c “CREATE DATABASE gis;”</p>
-<p>###3.在数据库实例gis中注册PostGIS扩展件</p>
-<h4 id="Enable-PostGIS-includes-raster"><a href="#Enable-PostGIS-includes-raster" class="headerlink" title="Enable PostGIS (includes raster)"></a>Enable PostGIS (includes raster)</h4><p>psql gis -c “CREATE EXTENSION postgis;””</p>
+<h3 id="2-初始化数据库实例gis"><a href="#2-初始化数据库实例gis" class="headerlink" title="2.初始化数据库实例gis"></a>2.初始化数据库实例gis</h3><p>pg_ctl init gis<br>psql gis -c “CREATE DATABASE gis;”</p>
+<h3 id="3-在数据库实例gis中注册PostGIS扩展件"><a href="#3-在数据库实例gis中注册PostGIS扩展件" class="headerlink" title="3.在数据库实例gis中注册PostGIS扩展件"></a>3.在数据库实例gis中注册PostGIS扩展件</h3><h4 id="Enable-PostGIS-includes-raster"><a href="#Enable-PostGIS-includes-raster" class="headerlink" title="Enable PostGIS (includes raster)"></a>Enable PostGIS (includes raster)</h4><p>psql gis -c “CREATE EXTENSION postgis;””</p>
 <h4 id="Enable-Topology"><a href="#Enable-Topology" class="headerlink" title="Enable Topology"></a>Enable Topology</h4><p>psql gis -c “CREATE EXTENSION postgis_topology;”</p>
 <h4 id="Enable-PostGIS-Advanced-3D-and-other-geoprocessing-algorithms-sfcgal-not-available-with-all-distributions"><a href="#Enable-PostGIS-Advanced-3D-and-other-geoprocessing-algorithms-sfcgal-not-available-with-all-distributions" class="headerlink" title="Enable PostGIS Advanced 3D and other geoprocessing algorithms sfcgal not available with all distributions"></a>Enable PostGIS Advanced 3D and other geoprocessing algorithms sfcgal not available with all distributions</h4><p>psql gis -c “CREATE EXTENSION postgis_sfcgal;”</p>
 <h4 id="fuzzy-matching-needed-for-Tiger"><a href="#fuzzy-matching-needed-for-Tiger" class="headerlink" title="fuzzy matching needed for Tiger"></a>fuzzy matching needed for Tiger</h4><p>psql gis -c “CREATE EXTENSION fuzzystrmatch;“</p>
 <h4 id="rule-based-standardizer"><a href="#rule-based-standardizer" class="headerlink" title="rule based standardizer"></a>rule based standardizer</h4><p>psql gis -c “CREATE EXTENSION address_standardizer;”</p>
 <h4 id="example-rule-data-set"><a href="#example-rule-data-set" class="headerlink" title="example rule data set"></a>example rule data set</h4><p>psql gis -c “CREATE EXTENSION address_standardizer_data_us;“</p>
 <h4 id="Enable-US-Tiger-Geocoder"><a href="#Enable-US-Tiger-Geocoder" class="headerlink" title="Enable US Tiger Geocoder"></a>Enable US Tiger Geocoder</h4><p>psql gis -c “CREATE EXTENSION postgis_tiger_geocoder;”</p>
-<p>###4.从<a href="https://mapzen.com/data/metro-extracts/" target="_blank" rel="external">OpenStreetMap</a>网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。</p>
-<p>###5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql<br>brew install osm2pgsql</p>
-<p>###6.将“OSM PBF”导入数据库实例gis。<br>osm2pgsql -c -d gis beijing.osm.pbf</p>
+<h3 id="4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。"><a href="#4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。" class="headerlink" title="4.从OpenStreetMap网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。"></a>4.从<a href="https://mapzen.com/data/metro-extracts/" target="_blank" rel="external">OpenStreetMap</a>网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。</h3><h3 id="5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"><a href="#5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql" class="headerlink" title="5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"></a>5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql</h3><p>brew install osm2pgsql</p>
+<h3 id="6-将“OSM-PBF”导入数据库实例gis。"><a href="#6-将“OSM-PBF”导入数据库实例gis。" class="headerlink" title="6.将“OSM PBF”导入数据库实例gis。"></a>6.将“OSM PBF”导入数据库实例gis。</h3><p>osm2pgsql -c -d gis beijing.osm.pbf</p>
 
     </section>
     <footer class="post-footer">
