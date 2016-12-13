@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>HAWQ DBA Tutorial 1 | KunTeng&#39;s Stories about Big Data and Cloud</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="KunTeng's Stories about Big Data and Cloud">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">KunTeng's Stories about Big Data and Cloud</h1>
+            <h2 class="blog-description"><button id="showMenu">Show Menu</button></h2>
+        </div>
+    </div>
+</header>
+
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2016-12-10T02:50:41.000Z" itemprop="datePublished">
+          2016-12-10
+      </time>
+    
+</span>
+    <h1 class="post-title">HAWQ DBA Tutorial 1</h1>
+    <section class="post-content">
+      <p>##HAWQ DBA知识结构<br>分五层、八项、四核心:<br>Hardware -&gt; OS &amp; Shell -&gt; postgreSQL（core) -&gt; Greenplum （core) -&gt; HAWQ (core)<br>                                            -&gt; HDFS (core)<br>                                            -&gt; YARN (optional)<br>                                            -&gt; Ambari(recommend for production)<br>1.因HAWQ可以stand alone模式运行，故而YARN是可选的。只在机群需同时负载HAWQ及其它分析栈(如Flink)时，需用YARN。<br>2.Ambari，涵盖了部署、监视、控制、报警、健康检查操作、故障恢复操作，在实际生产运维中，是HAWQ DBA不可或缺的工具。但此工具会用即可，Ambari本身实现细节知识基本用不到。<br>3.postgreSQL, Greenplum, HDFS, HAWQ，是HAWQ DBA知识核心构成，同时也是认知和动手水平差距的核心构成，必须深研。</p>
+<p>##HAWQ DBA资料</p>
+<p>##postgreSQL<br>1.postgreSQL中国社区 何伟平 翻译 <a href="http://att.newsmth.net/nForum/att/Database/86374/688" target="_blank" rel="external">《PostgreSQL 8.2.3中文文档》</a> (Recommend)<br>2.媛媛、韩悦悦为代表的山东瀚高的开发人员以及社区其他志愿者 翻译<a href="http://www.postgres.cn/docs/9.3" target="_blank" rel="external">《PostgreSQL 9.3.1 中文手册》</a><br>3.Pivotal GC 陈淼 翻译<a href="http://mp.weixin.qq.com/s/i0pKHUzrXlUJWh8CB7IXbg" target="_blank" rel="external">《Greenplum管理员指南》</a>(当前版本V4.2.2_2015_Revised)<br>4.Pivotal [Greenplum Documents] (<a href="http://gpdb.docs.pivotal.io/" target="_blank" rel="external">http://gpdb.docs.pivotal.io/</a>) (重点三文档《Installation Guide》《Administrator Guide》《Greenplum Database Best Practices》)<br>5.Apache <a href="http://hadoop.apache.org/docs/stable/" target="_blank" rel="external">Hadoop Documents</a><br>6.Pivotal [HAWQ Documents] (<a href="http://hdb.docs.pivotal.io/" target="_blank" rel="external">http://hdb.docs.pivotal.io/</a>)</p>
+<p>##HAWQ开发环境</p>
+<p>###1.推荐使用Mac+VM with 4G RAM+Deploy HDFS with Pseudo-Distributed Mode + Installing HAWQ from the command line<br>VM-可在有风险实验操作前，制作快照，遇灾回滚即可。<br>Mac-Windows is OK, but Mac recommanded：基本兼容Shell、软件丰富、备份方便、电池耐用。确实省时。值得投入6K+。</p>
+<p>###2.操作过程如下。</p>
+<p>####2.1 Create a VM with CentOS 6.* with a internal IP（细节不表)</p>
+<p>####2.2 Installing Oracle JDK 1.8 (Apache Hadoop官方网站声明OpenJDK也可)</p>
+<p>####2.3 yum install ssh &amp;&amp; yum install rsync</p>
+<p>####2.4 Download [Hadoop]（<a href="http://www.apache.org/dyn/closer.cgi/hadoop/common/）" target="_blank" rel="external">http://www.apache.org/dyn/closer.cgi/hadoop/common/）</a> hadoop-*.tar.gz包至CentOS VM的/usr/local</p>
+<p>####2.5 tar -xzf /usr/local/hadoop-*.tar.gz &amp;&amp; ln -s ./hadoop-* hadoop</p>
+<p>####2.6 vi /usr/local/hadoop/etc/hadoop/hadoop-env.sh, 修改JAVA_HOME为“export JAVA_HOME=/usr/java/latest”</p>
+<p>####2.7 vi etc/hadoop/core-site.xml<br>    <configuration><br>         <property><br>             <name>fs.defaultFS</name><br>        <value>hdfs://localhost:8020</value><br>         </property><br>    </configuration></p>
+<p>####2.8 vi etc/hadoop/hdfs-site.xml<br>    <configuration><br>        <property><br>            <name>dfs.replication</name><br>            <value>1</value><br>        </property><br>    </configuration></p>
+<p>####2.9 Check that you can ssh to the localhost without a passphrase:<br>$ssh localhost</p>
+<p>####<br>$useradd -U -m hdfs &amp;&amp; echo -e “hdfs\hdfs” |passwd hdfs<br>$su - hdfs<br>$sed ‘s/PATH=$PATH:$HOME/PATH=$PATH:$HOME\/bin\/usr\/local/‘ .bash_profile</p>
+<p>####2.10 Format HDFS<br>$ bin/hdfs namenode -format</p>
+<p>####2.11 Start NameNode daemon and DataNode daemon:<br>$ sbin/start-dfs.sh<br>（如希望关闭则 $ sbin/stop-dfs.sh）</p>
+<p>####2.12 Browse the web interface for the NameNode：<br><a href="http://localhost:50070/" target="_blank" rel="external">http://localhost:50070/</a></p>
+<p>####2.13 echo “vm.overcommit_ratio=50” &gt;&gt;/etc/sysctl.conf</p>
+<p>####2.14 vi /etc/sysctl.conf</p>
+<h1 id="HAWQ"><a href="#HAWQ" class="headerlink" title="HAWQ"></a>HAWQ</h1><p>kernel.shmmax = 4000000000<br>kernel.shmmni = 4096<br>kernel.shmall = 4000000000<br>kernel.sem = 250 512000 100 2048<br>kernel.sysrq = 1<br>kernel.core_uses_pid = 1<br>kernel.msgmnb = 65536<br>kernel.msgmax = 65536<br>kernel.msgmni = 2048</p>
+<p>#Why HAWQ setted “0”?<br>net.ipv4.tcp_syncookies = 0<br>net.ipv4.ip_forward = 0<br>net.ipv4.conf.default.accept_source_route = 0<br>net.ipv4.tcp_tw_recycle = 1<br>net.ipv4.tcp_max_syn_backlog = 200000<br>net.ipv4.conf.all.arp_filter = 1<br>net.ipv4.ip_local_port_range = 1281 65535<br>net.core.netdev_max_backlog = 200000<br>vm.overcommit_memory = 2<br>fs.nr_open = 3000000<br>kernel.threads-max = 798720<br>kernel.pid_max = 798720</p>
+<h1 id="increase-network"><a href="#increase-network" class="headerlink" title="increase network"></a>increase network</h1><p>net.core.rmem_max=2097152<br>net.core.wmem_max=2097152</p>
+<p>####2.15<br>$useradd -U -m hawq<br>$echo -e “hawq\hawq” |passwd hawq</p>
+<p>####2.16<br>$mkdir /staging<br>$chown hawq<br>$chown -R hawq:hawq /usr/local/hawq<br>$chown -R hawq:hawq /usr/local/hawq_2_1_0_0</p>
+<p>####2.17<br>$mkdir -p /var/lib/hadoop-hdfs/dn_socket<br>$chown -R hdfs:hdfs /var/lib/hadoop-hdfs<br>$chmod -R 755 /var/lib/hadoop-hdfs</p>
+<p>####2.18 vi /usr/local/hadoop/etc/hadoop/hdfs-site.xml<br>        <property><br>                <name>dfs.allow.truncate</name><br>                <value>true</value><br>        </property><br>        <property><br>                <name>dfs.block.access.token.enable</name><br>                <value>false</value><br>                <description>false for an unsecured HDFS cluster, or true for a secure cluster<br>                </description><br>        </property><br>        <property><br>                <name>dfs.block.local-path-access.user</name><br>                <value>hawq</value><br>        </property><br>        <property><br>                <name>dfs.domain.socket.path</name><br>                <value>/var/lib/hadoop-hdfs/dn_socket</value><br>        </property><br>        <property><br>                <name>dfs.client.read.shortcircuit</name><br>                <value>true</value><br>        </property><br>        <property><br>                <name>dfs.client.socket-timeout</name><br>                <value>300000000</value><br>        </property><br>        <property><br>                <name>dfs.client.use.legacy.blockreader.local</name><br>                <value>false</value><br>        </property><br>        <property><br>                <name>dfs.datanode.data.dir.perm</name><br>                <value>750</value><br>        </property><br>        <property><br>                <name>dfs.datanode.handler.count</name><br>                <value>60</value><br>        </property><br>        <property><br>                <name>dfs.datanode.max.transfer.threads</name><br>                <value>40960</value><br>        </property><br>        <property><br>                <name>dfs.datanode.socket.write.timeout</name><br>                <value>7200000</value><br>        </property><br>        <property><br>                <name>dfs.namenode.accesstime.precision</name><br>                <value>0</value><br>        </property><br>        <property><br>                <name>dfs.namenode.handler.count</name><br>                <value>600</value><br>        </property><br>        <property><br>                <name>dfs.support.append</name><br>                <value>true</value><br>        </property></p>
+<p>####2.19 vi /usr/local/hadoop/etc/hadoop/core-site.xml<br>        <property><br>                <name>ipc.client.connection.maxidletime</name><br>                <value>3600000</value><br>        </property><br>        <property><br>                <name>ipc.client.connect.timeout</name><br>                <value>300000</value><br>        </property><br>        <property><br>                <name>ipc.server.listen.queue.size</name><br>                <value>3300</value><br>        </property></p>
+<p>####2.20 $yum install httpd</p>
+<p>####2.21<br>$sed ‘s/SELINUX=enforcing/SELINUX=disabled’ /etc/sysconfig/selinux<br>$reboot</p>
+<p>####2.22<br>$yum install -y epel-release</p>
+<p>####2.23<br>$su - hawq<br>$source /usr/local/hawq/greenplum_path.sh<br>$hawq ssh-exkeys -h localhost</p>
+<p>####2.24 /usr/local/hawq/etc/hawq-site.xml</p>
+<pre><code>&lt;property&gt;
+        &lt;name&gt;hawq_master_address_port&lt;/name&gt;
+        &lt;value&gt;15432&lt;/value&gt;
+        &lt;description&gt;The port of hawq master.&lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+        &lt;name&gt;hawq_segment_address_port&lt;/name&gt;
+        &lt;value&gt;50000&lt;/value&gt;
+        &lt;description&gt;The port of hawq segment.&lt;/description&gt;
+&lt;/property&gt;
+
+        &lt;property&gt;
+        &lt;name&gt;hawq_rm_memory_limit_perseg&lt;/name&gt;
+        &lt;value&gt;1GB&lt;/value&gt;
+        &lt;description&gt;The limit of memory usage in a hawq segment when
+                                 hawq_global_rm_type is set &apos;none&apos;.
+        &lt;/description&gt;
+&lt;/property&gt;
+
+&lt;property&gt;
+        &lt;name&gt;hawq_rm_nvcore_limit_perseg&lt;/name&gt;
+        &lt;value&gt;2&lt;/value&gt;
+        &lt;description&gt;The limit of virtual core usage in a hawq segment when
+                                 hawq_global_rm_type is set &apos;none&apos;.
+        &lt;/description&gt;
+&lt;/property&gt;
+</code></pre><p>####2.25<br>$hdfs dfs -chown hawq hdfs://localhost:8020/</p>
+<p>####2.26<br>$su - hawq<br>$hawq init cluster</p>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>KunTeng</h4>
+    <p>ALL BUSINESS RIGHTS RESERVED. 转载请务必注明出处</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=ALL BUSINESS RIGHTS RESERVED. 转载请务必注明出处 ?url=http://yoursite.com/2016/12/10/HAWQ-DBA-Tutorial-1/" target="_blank">
+        <span class="hidden">weibo</span>
+    </a>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/12/10/HAWQ-DBA-Tutorial-1/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/12/10/HAWQ-DBA-Tutorial-1/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/12/10/HAWQ-DBA-Tutorial-1/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2016/11/28/PostGIS-Tutorial-1/">
+        PostGIS Tutorial 1 "搭建测试环境 On Mac with Homebrew" →
+    </a>
+    
+</nav>
+
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
+</div>
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">KunTeng's Stories about Big Data and Cloud</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archives"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/archives"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/archives"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/archives"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/archives"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>
