@@ -75,6 +75,7 @@
 <h1 id="HAWQ"><a href="#HAWQ" class="headerlink" title="HAWQ"></a>HAWQ</h1><p>kernel.shmmax = 4000000000<br>kernel.shmmni = 4096<br>kernel.shmall = 4000000000<br>kernel.sem = 250 512000 100 2048<br>kernel.sysrq = 1<br>kernel.core_uses_pid = 1<br>kernel.msgmnb = 65536<br>kernel.msgmax = 65536<br>kernel.msgmni = 2048</p>
 <p>#Why HAWQ setted “0”?<br>net.ipv4.tcp_syncookies = 0<br>net.ipv4.ip_forward = 0<br>net.ipv4.conf.default.accept_source_route = 0<br>net.ipv4.tcp_tw_recycle = 1<br>net.ipv4.tcp_max_syn_backlog = 200000<br>net.ipv4.conf.all.arp_filter = 1<br>net.ipv4.ip_local_port_range = 1281 65535<br>net.core.netdev_max_backlog = 200000<br>vm.overcommit_memory = 2<br>fs.nr_open = 3000000<br>kernel.threads-max = 798720<br>kernel.pid_max = 798720</p>
 <h1 id="increase-network"><a href="#increase-network" class="headerlink" title="increase network"></a>increase network</h1><p>net.core.rmem_max=2097152<br>net.core.wmem_max=2097152</p>
+<h1 id="Extra-TCP-connection-quotas-for-gpfdist"><a href="#Extra-TCP-connection-quotas-for-gpfdist" class="headerlink" title="Extra TCP connection quotas for gpfdist"></a>Extra TCP connection quotas for gpfdist</h1><p>net.core.somaxconn = 1024</p>
 <p>####2.15<br>$useradd -U -m hawq<br>$echo -e “hawq\hawq” |passwd hawq</p>
 <p>####2.16<br>$mkdir /staging<br>$chown hawq<br>$chown -R hawq:hawq /usr/local/hawq<br>$chown -R hawq:hawq /usr/local/hawq_2_1_0_0</p>
 <p>####2.17<br>$mkdir -p /var/lib/hadoop-hdfs/dn_socket<br>$chown -R hdfs:hdfs /var/lib/hadoop-hdfs<br>$chmod -R 755 /var/lib/hadoop-hdfs</p>
@@ -114,6 +115,7 @@
 &lt;/property&gt;
 </code></pre><p>####2.25<br>$hdfs dfs -chown hawq hdfs://localhost:8020/</p>
 <p>####2.26<br>$su - hawq<br>$hawq init cluster</p>
+<p>####2.27 TODO: reduce the heap size of HDFS service JVM to shrink the VM memory consume. </p>
 
     </section>
     <footer class="post-footer">
