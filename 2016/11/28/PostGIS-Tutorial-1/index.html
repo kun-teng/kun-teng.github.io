@@ -15,6 +15,8 @@
 
   
   
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
   
 
   
@@ -29,10 +31,10 @@
     <!-- wrapper -->
     <div class="wrapper">
 
-      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+      <header class="site-head" style="background: #24282b url(/img/img-bg.jpg) 0 -20%">
     <div class="vertical">
         <div class="site-head-content inner">
-             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"></a> 
             <h1 class="blog-title">KunTeng's Stories about Big Data and Cloud</h1>
             <h2 class="blog-description"><button id="showMenu">Show Menu</button></h2>
         </div>
@@ -50,7 +52,7 @@
     
     
     | 
-    <a href='/tags/PostGIS/'>PostGIS</a>
+    <a href="/tags/PostGIS/">PostGIS</a>
     
     
 </span>
@@ -68,7 +70,7 @@
 <h4 id="rule-based-standardizer"><a href="#rule-based-standardizer" class="headerlink" title="rule based standardizer"></a>rule based standardizer</h4><p>psql gis -c “CREATE EXTENSION address_standardizer;”</p>
 <h4 id="example-rule-data-set"><a href="#example-rule-data-set" class="headerlink" title="example rule data set"></a>example rule data set</h4><p>psql gis -c “CREATE EXTENSION address_standardizer_data_us;“</p>
 <h4 id="Enable-US-Tiger-Geocoder"><a href="#Enable-US-Tiger-Geocoder" class="headerlink" title="Enable US Tiger Geocoder"></a>Enable US Tiger Geocoder</h4><p>psql gis -c “CREATE EXTENSION postgis_tiger_geocoder;”</p>
-<h3 id="4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。"><a href="#4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。" class="headerlink" title="4.从OpenStreetMap网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。"></a>4.从<a href="https://mapzen.com/data/metro-extracts/" target="_blank" rel="external">OpenStreetMap</a>网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。</h3><h3 id="5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"><a href="#5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql" class="headerlink" title="5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"></a>5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql</h3><p>brew install osm2pgsql</p>
+<h3 id="4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。"><a href="#4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。" class="headerlink" title="4.从OpenStreetMap网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。"></a>4.从<a href="https://mapzen.com/data/metro-extracts/" target="_blank" rel="noopener">OpenStreetMap</a>网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。</h3><h3 id="5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"><a href="#5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql" class="headerlink" title="5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"></a>5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql</h3><p>brew install osm2pgsql</p>
 <h3 id="6-将“OSM-PBF”导入数据库实例gis。"><a href="#6-将“OSM-PBF”导入数据库实例gis。" class="headerlink" title="6.将“OSM PBF”导入数据库实例gis。"></a>6.将“OSM PBF”导入数据库实例gis。</h3><p>osm2pgsql -c -d gis beijing.osm.pbf</p>
 
     </section>
@@ -82,16 +84,13 @@
     <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=ALL BUSINESS RIGHTS RESERVED. 转载请务必注明出处 ?url=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/"
-       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/"
-       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/"
-       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
 </section>
@@ -122,6 +121,8 @@
 
       
 <footer class="site-footer">
+  
+  <a class="subscribe icon-feed" href="atom.xml"><span class="tooltip">Subscribe!</span></a>
   
   <div class="inner">
      <section class="copyright">All content copyright <a href="/">KunTeng's Stories about Big Data and Cloud</a> &copy; 2014 &bull; All rights reserved.</section>

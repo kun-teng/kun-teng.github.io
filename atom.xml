@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KunTeng&#39;s Stories about Big Data and Cloud</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-11-20T09:55:01.347Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>KunTeng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版</title>
+    <link href="http://yoursite.com/2018/11/20/%E6%B5%81%E8%A1%8C%E7%9A%84%E6%9C%80%E9%AB%98%E7%BA%A7%E5%BC%80%E6%BA%90%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0Greenplum%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99%E5%85%A8%E6%96%B0%E6%94%B9%E7%89%88/"/>
+    <id>http://yoursite.com/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/</id>
+    <published>2018-11-20T07:54:47.000Z</published>
+    <updated>2018-11-20T09:55:01.347Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://kun-teng.github.io" target="_blank" rel="noopener">KunTeng</a></p><h3 id="调查显示，敏捷式AI和BI能力，是当下许多谋划基于IT的商业能力转型组织的投资热点。"><a href="#调查显示，敏捷式AI和BI能力，是当下许多谋划基于IT的商业能力转型组织的投资热点。" class="headerlink" title="调查显示，敏捷式AI和BI能力，是当下许多谋划基于IT的商业能力转型组织的投资热点。"></a>调查显示，敏捷式AI和BI能力，是当下许多谋划基于IT的商业能力转型组织的投资热点。</h3><h3 id="日前，非常流行的最高级开源分布式数据分析平台Greenplum官方网站，全新改版。这将有利于活跃的Greenplum社区，向创新型客户及时传播，更多先进用例和产品特性信息。"><a href="#日前，非常流行的最高级开源分布式数据分析平台Greenplum官方网站，全新改版。这将有利于活跃的Greenplum社区，向创新型客户及时传播，更多先进用例和产品特性信息。" class="headerlink" title="日前，非常流行的最高级开源分布式数据分析平台Greenplum官方网站，全新改版。这将有利于活跃的Greenplum社区，向创新型客户及时传播，更多先进用例和产品特性信息。"></a>日前，非常流行的最高级开源分布式数据分析平台<a href="https://greenplum.org/" target="_blank" rel="noopener">Greenplum官方网站</a>，全新改版。这将有利于活跃的Greenplum社区，向创新型客户及时传播，更多先进用例和产品特性信息。</h3><h3 id="Greenplum的敏捷式AI和BI能力，及可在K8S等云平台及裸硬件运行的能力，广受欢迎，在大中华区和全球各行业拥有数百顶级客户-领先银行、证券交易所、保险、互联网巨头、政府、高端制造、电信等-。"><a href="#Greenplum的敏捷式AI和BI能力，及可在K8S等云平台及裸硬件运行的能力，广受欢迎，在大中华区和全球各行业拥有数百顶级客户-领先银行、证券交易所、保险、互联网巨头、政府、高端制造、电信等-。" class="headerlink" title="Greenplum的敏捷式AI和BI能力，及可在K8S等云平台及裸硬件运行的能力，广受欢迎，在大中华区和全球各行业拥有数百顶级客户(领先银行、证券交易所、保险、互联网巨头、政府、高端制造、电信等)。"></a>Greenplum的敏捷式AI和BI能力，及可在K8S等云平台及裸硬件运行的能力，广受欢迎，在大中华区和全球各行业拥有数百顶级客户(领先银行、证券交易所、保险、互联网巨头、政府、高端制造、电信等)。</h3><pre><code>    Greenplum源自postgreSQL, 继承了其优秀的数据库和BI能力，以及GIS功能，其完全无共享架构，具备超出TD和O记数据库的ROI优势。它具备Hadoop栈的绝大部分能力，比如文本搜索等功能，运维却简单的多。    其AI能力，建立在预置的并行Python、R和Madlib能力之上，并集成了包括TensorFlow在内的许多流行的AI框架。    体验一致的(并行SQL+多种并行UDF语言式+JDBC/ODBC等标准控制接口)AI编程模式，开源，易维护，支持事务，高性能，多数据类型处理(二进制、文本、半结构化XML及SQL ON JSON), 广泛的周边系统集成能力(Kafka, S3, Hadoop, Gemfire/Geode, Spark等), 带来了ROI出众的敏捷分析架构。    用户对Greenplum热爱的原因很多，前述几点已令人印象深刻。</code></pre><h3 id="改版后的网站，涵盖”博客、下载、社区、新知、指导、事件”，共六大板块。"><a href="#改版后的网站，涵盖”博客、下载、社区、新知、指导、事件”，共六大板块。" class="headerlink" title="改版后的网站，涵盖”博客、下载、社区、新知、指导、事件”，共六大板块。"></a>改版后的网站，涵盖”博客、下载、社区、新知、指导、事件”，共六大板块。</h3><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/GP_NewSite.jpg" title="GP新站"><h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><h3 id="博客板块，内容新颖全面，有深度有见解，是资深GP粉的最爱。"><a href="#博客板块，内容新颖全面，有深度有见解，是资深GP粉的最爱。" class="headerlink" title="博客板块，内容新颖全面，有深度有见解，是资深GP粉的最爱。"></a>博客板块，内容新颖全面，有深度有见解，是资深GP粉的最爱。</h3><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/GP_Blog1.jpg"><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/GP_Blog2.jpg"><h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><h3 id="下载板块，源码、编译物，可研可用。"><a href="#下载板块，源码、编译物，可研可用。" class="headerlink" title="下载板块，源码、编译物，可研可用。"></a>下载板块，源码、编译物，可研可用。</h3><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/CodeAndBin.jpg"><h3 id="-2"><a href="#-2" class="headerlink" title=" "></a> </h3><h3 id="社区板块，无论贡献源码、提供反馈、宣讲布道，皆有入口。"><a href="#社区板块，无论贡献源码、提供反馈、宣讲布道，皆有入口。" class="headerlink" title="社区板块，无论贡献源码、提供反馈、宣讲布道，皆有入口。"></a>社区板块，无论贡献源码、提供反馈、宣讲布道，皆有入口。</h3><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/Community.jpg"><h3 id="-3"><a href="#-3" class="headerlink" title=" "></a> </h3><h3 id="新知和指导两大板块，初学、提高、入社资料和工具，一应俱全。"><a href="#新知和指导两大板块，初学、提高、入社资料和工具，一应俱全。" class="headerlink" title="新知和指导两大板块，初学、提高、入社资料和工具，一应俱全。"></a>新知和指导两大板块，初学、提高、入社资料和工具，一应俱全。</h3><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/LearnTutorial.jpg"><h3 id="-4"><a href="#-4" class="headerlink" title=" "></a> </h3><h3 id="事件板块，从全球PG大会-postgreSQL-，到PG大会中的GP-Session-Greenplum-以及GP-Summit盛会，GP-Meetup小聚，一网打尽。"><a href="#事件板块，从全球PG大会-postgreSQL-，到PG大会中的GP-Session-Greenplum-以及GP-Summit盛会，GP-Meetup小聚，一网打尽。" class="headerlink" title="事件板块，从全球PG大会(postgreSQL)，到PG大会中的GP Session(Greenplum), 以及GP Summit盛会，GP Meetup小聚，一网打尽。"></a>事件板块，从全球PG大会(postgreSQL)，到PG大会中的GP Session(Greenplum), 以及GP Summit盛会，GP Meetup小聚，一网打尽。</h3><img src="/2018/11/20/流行的最高级开源分布式数据分析平台Greenplum官方网站全新改版/Event.jpg">    <h3 id="-5"><a href="#-5" class="headerlink" title=" "></a> </h3><h3 id="GP的敏捷式AI和BI能力，近在咫尺。现在就下载Sandbox试用吧。"><a href="#GP的敏捷式AI和BI能力，近在咫尺。现在就下载Sandbox试用吧。" class="headerlink" title="GP的敏捷式AI和BI能力，近在咫尺。现在就下载Sandbox试用吧。"></a>GP的敏捷式AI和BI能力，近在咫尺。现在就<a href="https://greenplum.org/gpdb-sandbox-tutorials/" target="_blank" rel="noopener">下载Sandbox</a>试用吧。</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://kun-teng.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;KunTeng&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;调查显示，敏捷式AI和BI能力，是当下许多谋划基于IT的商业能力转型组织的投资热点。&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="Greenplum" scheme="http://yoursite.com/tags/Greenplum/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RackHD Tutorial [1]</title>
+    <link href="http://yoursite.com/2017/01/04/RackHD-Tutorial-1/"/>
+    <id>http://yoursite.com/2017/01/04/RackHD-Tutorial-1/</id>
+    <published>2017-01-04T14:29:47.000Z</published>
+    <updated>2017-01-04T14:32:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#RackHD是啥？<br>操控Bare Metal的工具。<br><a href="http://rackhd.readthedocs.io/en/latest/introduction.html" target="_blank" rel="noopener">http://rackhd.readthedocs.io/en/latest/introduction.html</a></p><p>#Prequisites</p><ol><li>Vagrant</li><li>VirtualBox</li><li>python<br>(On Mac: brew install python3)</li></ol><p>#</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#RackHD是啥？&lt;br&gt;操控Bare Metal的工具。&lt;br&gt;&lt;a href=&quot;http://rackhd.readthedocs.io/en/latest/introduction.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http:
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HAWQ DBA Tutorial 1</title>
+    <link href="http://yoursite.com/2016/12/10/HAWQ-DBA-Tutorial-1/"/>
+    <id>http://yoursite.com/2016/12/10/HAWQ-DBA-Tutorial-1/</id>
+    <published>2016-12-10T02:50:41.000Z</published>
+    <updated>2016-12-27T10:40:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>##HAWQ DBA知识结构<br>分五层、八项、四核心:<br>Hardware -&gt; OS &amp; Shell -&gt; postgreSQL（core) -&gt; Greenplum （core) -&gt; HAWQ (core)<br>                                            -&gt; HDFS (core)<br>                                            -&gt; YARN (optional)<br>                                            -&gt; Ambari(recommend for production)<br>1.因HAWQ可以stand alone模式运行，故而YARN是可选的。只在机群需同时负载HAWQ及其它分析栈(如Flink)时，需用YARN。<br>2.Ambari，涵盖了部署、监视、控制、报警、健康检查操作、故障恢复操作，在实际生产运维中，是HAWQ DBA不可或缺的工具。但此工具会用即可，Ambari本身实现细节知识基本用不到。<br>3.postgreSQL, Greenplum, HDFS, HAWQ，是HAWQ DBA知识核心构成，同时也是认知和动手水平差距的核心构成，必须深研。<br>4.学习过程：先看文档中的模型讲解，边读边动手；遇到问题，google+动手+求教；逐步读代码。</p><p>##HAWQ DBA资料</p><p>##postgreSQL<br>1.postgreSQL中国社区 何伟平 翻译 <a href="http://att.newsmth.net/nForum/att/Database/86374/688" target="_blank" rel="noopener">《PostgreSQL 8.2.3中文文档》</a> (Recommend)<br>2.媛媛、韩悦悦为代表的山东瀚高的开发人员以及社区其他志愿者 翻译<a href="http://www.postgres.cn/docs/9.3" target="_blank" rel="noopener">《PostgreSQL 9.3.1 中文手册》</a><br>3.Pivotal GC 陈淼 翻译<a href="http://mp.weixin.qq.com/s/i0pKHUzrXlUJWh8CB7IXbg" target="_blank" rel="noopener">《Greenplum管理员指南》</a>(当前版本V4.2.2_2015_Revised)<br>4.Pivotal [Greenplum Documents] (<a href="http://gpdb.docs.pivotal.io/" target="_blank" rel="noopener">http://gpdb.docs.pivotal.io/</a>) (重点三文档《Installation Guide》《Administrator Guide》《Greenplum Database Best Practices》)<br>5.Apache <a href="http://hadoop.apache.org/docs/stable/" target="_blank" rel="noopener">Hadoop Documents</a><br>6.Pivotal [HAWQ Documents] (<a href="http://hdb.docs.pivotal.io/" target="_blank" rel="noopener">http://hdb.docs.pivotal.io/</a>)<br>7.武汉大学 彭智勇 彭煜玮 《PostgreSQL数据库内核分析》<br>8.[《Python 入门教程》] (<a href="http://docspy3zh.readthedocs.io/en/latest/tutorial/" target="_blank" rel="noopener">http://docspy3zh.readthedocs.io/en/latest/tutorial/</a>)<br>9.[基本的Bash Shell指令] (<a href="http://cn.linux.vbird.org/linux_basic/0320bash.php" target="_blank" rel="noopener">http://cn.linux.vbird.org/linux_basic/0320bash.php</a>)</p><p>##HAWQ开发环境</p><p>###1.推荐使用Mac+VM with 4G RAM+Deploy HDFS with Pseudo-Distributed Mode + Installing HAWQ from the command line<br>VM-可在有风险实验操作前，制作快照，遇灾回滚即可。<br>Mac-Windows is OK, but Mac recommanded：基本兼容Shell、软件丰富、备份方便、电池耐用。确实省时。值得投入6K+。</p><p>###2.操作过程如下。</p><p>####2.1 Create a VM with CentOS 6.* with a internal IP（细节不表)</p><p>####2.2 Installing Oracle JDK 1.8 (Apache Hadoop官方网站声明OpenJDK也可)</p><p>####2.3 yum install ssh &amp;&amp; yum install rsync</p><p>####2.4 Download [Hadoop]（<a href="http://www.apache.org/dyn/closer.cgi/hadoop/common/）" target="_blank" rel="noopener">http://www.apache.org/dyn/closer.cgi/hadoop/common/）</a> hadoop-*.tar.gz包至CentOS VM的/usr/local</p><p>####2.5 tar -xzf /usr/local/hadoop-*.tar.gz &amp;&amp; ln -s ./hadoop-* hadoop</p><p>####2.6 vi /usr/local/hadoop/etc/hadoop/hadoop-env.sh, 修改JAVA_HOME为“export JAVA_HOME=/usr/java/latest”</p><p>####2.7 vi etc/hadoop/core-site.xml<br>    <configuration><br>         <property><br>             <name>fs.defaultFS</name><br>        <value>hdfs://localhost:8020</value><br>         </property><br>    </configuration></p><p>####2.8 vi etc/hadoop/hdfs-site.xml<br>    <configuration><br>        <property><br>            <name>dfs.replication</name><br>            <value>1</value><br>        </property><br>    </configuration></p><p>####2.9 Check that you can ssh to the localhost without a passphrase:<br>$ssh localhost</p><p>####<br>$useradd -U -m hdfs &amp;&amp; echo -e “hdfs\hdfs” |passwd hdfs<br>$su - hdfs<br>$sed ‘s/PATH=$PATH:$HOME/PATH=$PATH:$HOME\/bin\/usr\/local/‘ .bash_profile</p><p>####2.10 Format HDFS<br>$ bin/hdfs namenode -format</p><p>####2.11 Start NameNode daemon and DataNode daemon:<br>$ sbin/start-dfs.sh<br>（如希望关闭则 $ sbin/stop-dfs.sh）</p><p>####2.12 Browse the web interface for the NameNode：<br><a href="http://localhost:50070/" target="_blank" rel="noopener">http://localhost:50070/</a></p><p>####2.13 echo “vm.overcommit_ratio=50” &gt;&gt;/etc/sysctl.conf</p><p>####2.14 vi /etc/sysctl.conf</p><h1 id="HAWQ"><a href="#HAWQ" class="headerlink" title="HAWQ"></a>HAWQ</h1><p>kernel.shmmax = 4000000000<br>kernel.shmmni = 4096<br>kernel.shmall = 4000000000<br>kernel.sem = 250 512000 100 2048<br>kernel.sysrq = 1<br>kernel.core_uses_pid = 1<br>kernel.msgmnb = 65536<br>kernel.msgmax = 65536<br>kernel.msgmni = 2048</p><p>#Why HAWQ setted “0”?<br>net.ipv4.tcp_syncookies = 0<br>net.ipv4.ip_forward = 0<br>net.ipv4.conf.default.accept_source_route = 0<br>net.ipv4.tcp_tw_recycle = 1<br>net.ipv4.tcp_max_syn_backlog = 200000<br>net.ipv4.conf.all.arp_filter = 1<br>net.ipv4.ip_local_port_range = 1281 65535<br>net.core.netdev_max_backlog = 200000<br>vm.overcommit_memory = 2<br>fs.nr_open = 3000000<br>kernel.threads-max = 798720<br>kernel.pid_max = 798720</p><h1 id="increase-network"><a href="#increase-network" class="headerlink" title="increase network"></a>increase network</h1><p>net.core.rmem_max=2097152<br>net.core.wmem_max=2097152</p><h1 id="Extra-TCP-connection-quotas-for-gpfdist"><a href="#Extra-TCP-connection-quotas-for-gpfdist" class="headerlink" title="Extra TCP connection quotas for gpfdist"></a>Extra TCP connection quotas for gpfdist</h1><p>net.core.somaxconn = 1024</p><p>####2.15<br>$useradd -U -m hawq<br>$echo -e “hawq\hawq” |passwd hawq</p><p>####2.16<br>$mkdir /staging<br>$chown hawq<br>$chown -R hawq:hawq /usr/local/hawq<br>$chown -R hawq:hawq /usr/local/hawq_2_1_0_0</p><p>####2.17<br>$mkdir -p /var/lib/hadoop-hdfs/dn_socket<br>$chown -R hdfs:hdfs /var/lib/hadoop-hdfs<br>$chmod -R 755 /var/lib/hadoop-hdfs</p><p>####2.18 vi /usr/local/hadoop/etc/hadoop/hdfs-site.xml<br>        <property><br>                <name>dfs.allow.truncate</name><br>                <value>true</value><br>        </property><br>        <property><br>                <name>dfs.block.access.token.enable</name><br>                <value>false</value><br>                <description>false for an unsecured HDFS cluster, or true for a secure cluster<br>                </description><br>        </property><br>        <property><br>                <name>dfs.block.local-path-access.user</name><br>                <value>hawq</value><br>        </property><br>        <property><br>                <name>dfs.domain.socket.path</name><br>                <value>/var/lib/hadoop-hdfs/dn_socket</value><br>        </property><br>        <property><br>                <name>dfs.client.read.shortcircuit</name><br>                <value>true</value><br>        </property><br>        <property><br>                <name>dfs.client.socket-timeout</name><br>                <value>300000000</value><br>        </property><br>        <property><br>                <name>dfs.client.use.legacy.blockreader.local</name><br>                <value>false</value><br>        </property><br>        <property><br>                <name>dfs.datanode.data.dir.perm</name><br>                <value>750</value><br>        </property><br>        <property><br>                <name>dfs.datanode.handler.count</name><br>                <value>60</value><br>        </property><br>        <property><br>                <name>dfs.datanode.max.transfer.threads</name><br>                <value>40960</value><br>        </property><br>        <property><br>                <name>dfs.datanode.socket.write.timeout</name><br>                <value>7200000</value><br>        </property><br>        <property><br>                <name>dfs.namenode.accesstime.precision</name><br>                <value>0</value><br>        </property><br>        <property><br>                <name>dfs.namenode.handler.count</name><br>                <value>600</value><br>        </property><br>        <property><br>                <name>dfs.support.append</name><br>                <value>true</value><br>        </property></p><p>####2.19 vi /usr/local/hadoop/etc/hadoop/core-site.xml<br>        <property><br>                <name>ipc.client.connection.maxidletime</name><br>                <value>3600000</value><br>        </property><br>        <property><br>                <name>ipc.client.connect.timeout</name><br>                <value>300000</value><br>        </property><br>        <property><br>                <name>ipc.server.listen.queue.size</name><br>                <value>3300</value><br>        </property></p><p>####2.20 $yum install httpd</p><p>####2.21<br>$sed ‘s/SELINUX=enforcing/SELINUX=disabled’ /etc/sysconfig/selinux<br>$reboot</p><p>####2.22<br>$yum install -y epel-release</p><p>####2.23<br>$su - hawq<br>$source /usr/local/hawq/greenplum_path.sh<br>$hawq ssh-exkeys -h localhost</p><p>####2.24 /usr/local/hawq/etc/hawq-site.xml</p><pre><code>&lt;property&gt;        &lt;name&gt;hawq_master_address_port&lt;/name&gt;        &lt;value&gt;15432&lt;/value&gt;        &lt;description&gt;The port of hawq master.&lt;/description&gt;&lt;/property&gt;&lt;property&gt;        &lt;name&gt;hawq_segment_address_port&lt;/name&gt;        &lt;value&gt;50000&lt;/value&gt;        &lt;description&gt;The port of hawq segment.&lt;/description&gt;&lt;/property&gt;        &lt;property&gt;        &lt;name&gt;hawq_rm_memory_limit_perseg&lt;/name&gt;        &lt;value&gt;1GB&lt;/value&gt;        &lt;description&gt;The limit of memory usage in a hawq segment when                                 hawq_global_rm_type is set &apos;none&apos;.        &lt;/description&gt;&lt;/property&gt;&lt;property&gt;        &lt;name&gt;hawq_rm_nvcore_limit_perseg&lt;/name&gt;        &lt;value&gt;2&lt;/value&gt;        &lt;description&gt;The limit of virtual core usage in a hawq segment when                                 hawq_global_rm_type is set &apos;none&apos;.        &lt;/description&gt;&lt;/property&gt;</code></pre><p>####2.25<br>$hdfs dfs -chown hawq hdfs://localhost:8020/</p><p>####2.26<br>$su - hawq<br>$hawq init cluster</p><p>####2.27 TODO: reduce the heap size of HDFS service JVM to shrink the VM memory consume. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##HAWQ DBA知识结构&lt;br&gt;分五层、八项、四核心:&lt;br&gt;Hardware -&amp;gt; OS &amp;amp; Shell -&amp;gt; postgreSQL（core) -&amp;gt; Greenplum （core) -&amp;gt; HAWQ (core)&lt;br&gt;       
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PostGIS Tutorial 1 &quot;搭建测试环境 On Mac with Homebrew&quot;</title>
+    <link href="http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/"/>
+    <id>http://yoursite.com/2016/11/28/PostGIS-Tutorial-1/</id>
+    <published>2016-11-28T07:13:54.000Z</published>
+    <updated>2016-11-28T07:27:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-安装postgreSQL及PostGIS"><a href="#1-安装postgreSQL及PostGIS" class="headerlink" title="1.安装postgreSQL及PostGIS"></a>1.安装postgreSQL及PostGIS</h3><p>brew install postgre</p><p>brew install postgis</p><p>echo “” &gt;&gt; ~.bash_profile<br>echo “export PGDATA=${PGDATA}” &gt;&gt;.bash_profile<br>source ~/.bash_profile</p><p>sed -i ‘s/#logging_collector = off/logging_collector = on/‘ ${PGDATA}/postgresql.conf</p><h3 id="2-初始化数据库实例gis"><a href="#2-初始化数据库实例gis" class="headerlink" title="2.初始化数据库实例gis"></a>2.初始化数据库实例gis</h3><p>pg_ctl init gis<br>psql gis -c “CREATE DATABASE gis;”</p><h3 id="3-在数据库实例gis中注册PostGIS扩展件"><a href="#3-在数据库实例gis中注册PostGIS扩展件" class="headerlink" title="3.在数据库实例gis中注册PostGIS扩展件"></a>3.在数据库实例gis中注册PostGIS扩展件</h3><h4 id="Enable-PostGIS-includes-raster"><a href="#Enable-PostGIS-includes-raster" class="headerlink" title="Enable PostGIS (includes raster)"></a>Enable PostGIS (includes raster)</h4><p>psql gis -c “CREATE EXTENSION postgis;””</p><h4 id="Enable-Topology"><a href="#Enable-Topology" class="headerlink" title="Enable Topology"></a>Enable Topology</h4><p>psql gis -c “CREATE EXTENSION postgis_topology;”</p><h4 id="Enable-PostGIS-Advanced-3D-and-other-geoprocessing-algorithms-sfcgal-not-available-with-all-distributions"><a href="#Enable-PostGIS-Advanced-3D-and-other-geoprocessing-algorithms-sfcgal-not-available-with-all-distributions" class="headerlink" title="Enable PostGIS Advanced 3D and other geoprocessing algorithms sfcgal not available with all distributions"></a>Enable PostGIS Advanced 3D and other geoprocessing algorithms sfcgal not available with all distributions</h4><p>psql gis -c “CREATE EXTENSION postgis_sfcgal;”</p><h4 id="fuzzy-matching-needed-for-Tiger"><a href="#fuzzy-matching-needed-for-Tiger" class="headerlink" title="fuzzy matching needed for Tiger"></a>fuzzy matching needed for Tiger</h4><p>psql gis -c “CREATE EXTENSION fuzzystrmatch;“</p><h4 id="rule-based-standardizer"><a href="#rule-based-standardizer" class="headerlink" title="rule based standardizer"></a>rule based standardizer</h4><p>psql gis -c “CREATE EXTENSION address_standardizer;”</p><h4 id="example-rule-data-set"><a href="#example-rule-data-set" class="headerlink" title="example rule data set"></a>example rule data set</h4><p>psql gis -c “CREATE EXTENSION address_standardizer_data_us;“</p><h4 id="Enable-US-Tiger-Geocoder"><a href="#Enable-US-Tiger-Geocoder" class="headerlink" title="Enable US Tiger Geocoder"></a>Enable US Tiger Geocoder</h4><p>psql gis -c “CREATE EXTENSION postgis_tiger_geocoder;”</p><h3 id="4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。"><a href="#4-从OpenStreetMap网站下载特定城市-比如”BEIJING”-”OSM-PBF”格式样例数据集，保存为beijing-osm-pbf。" class="headerlink" title="4.从OpenStreetMap网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。"></a>4.从<a href="https://mapzen.com/data/metro-extracts/" target="_blank" rel="noopener">OpenStreetMap</a>网站下载特定城市(比如”BEIJING”)”OSM PBF”格式样例数据集，保存为beijing.osm.pbf。</h3><h3 id="5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"><a href="#5-安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql" class="headerlink" title="5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql"></a>5.安装“导入osm数据至postgreSQL数据库”的工具osm2pgsql</h3><p>brew install osm2pgsql</p><h3 id="6-将“OSM-PBF”导入数据库实例gis。"><a href="#6-将“OSM-PBF”导入数据库实例gis。" class="headerlink" title="6.将“OSM PBF”导入数据库实例gis。"></a>6.将“OSM PBF”导入数据库实例gis。</h3><p>osm2pgsql -c -d gis beijing.osm.pbf</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-安装postgreSQL及PostGIS&quot;&gt;&lt;a href=&quot;#1-安装postgreSQL及PostGIS&quot; class=&quot;headerlink&quot; title=&quot;1.安装postgreSQL及PostGIS&quot;&gt;&lt;/a&gt;1.安装postgreSQL及PostG
+      
+    
+    </summary>
+    
+    
+      <category term="PostGIS" scheme="http://yoursite.com/tags/PostGIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/11/28/hello-world/"/>
+    <id>http://yoursite.com/2016/11/28/hello-world/</id>
+    <published>2016-11-28T03:56:08.000Z</published>
+    <updated>2016-11-28T03:56:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
